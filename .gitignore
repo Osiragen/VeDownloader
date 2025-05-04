@@ -1,0 +1,36 @@
+# ไฟล์ที่สร้างจาก Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# สภาพแวดล้อมเสมือน
+.venv
+venv/
+ENV/
+
+# ไฟล์ IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ไฟล์ระบบ
+.DS_Store
+Thumbs.db
