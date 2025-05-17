@@ -57,6 +57,22 @@ A simple GUI application for downloading videos using PyQt5.
    ./vedownloader.sh
    ```
 
+### Installing FFmpeg (Recommended)
+
+FFmpeg is required for full functionality, such as merging video and audio streams. To install FFmpeg:
+
+#### Windows
+1. Download FFmpeg from [FFmpeg official site](https://ffmpeg.org/download.html).
+2. Extract the zip file.
+3. Add the `bin` folder to your system PATH.
+
+#### Linux/Ubuntu
+1. Install FFmpeg using your package manager:
+   ```
+   sudo apt update
+   sudo apt install ffmpeg
+   ```
+
 ## Usage
 
 ### Basic Version
@@ -80,6 +96,13 @@ Run the Linux version with:
 ./vedownloader.sh
 ```
 
+### Example Usage
+
+1. Open the application.
+2. Paste the video URL into the input field.
+3. Select the desired quality and format.
+4. Click the "Download" button.
+
 ## Application Structure
 
 - `main.py` - Basic GUI application
@@ -95,6 +118,33 @@ Run the Linux version with:
 - yt-dlp
 - FFmpeg (recommended for full functionality)
 
+## Troubleshooting
+
+### Common Issues
+
+1. **PyQt5 or yt-dlp not found**:
+   - Ensure you have installed the required packages using `pip install PyQt5 yt-dlp`.
+
+2. **FFmpeg not installed**:
+   - Follow the installation instructions above.
+
+3. **Permission denied on Linux**:
+   - Ensure the script is executable using `chmod +x`.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push to your fork.
+4. Submit a pull request.
+
 ## License
 
 MIT
+
+## Additional Resources
+
+- [yt-dlp Documentation](https://github.com/yt-dlp/yt-dlp)
+- [PyQt5 Documentation](https://www.riverbankcomputing.com/software/pyqt/intro)

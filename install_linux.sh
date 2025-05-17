@@ -46,6 +46,11 @@ else
     exit 1
 fi
 
+# Install Python dependencies
+echo "Installing Python dependencies..."
+pip3 install --upgrade pip
+pip3 install PyQt5 yt-dlp
+
 # Create installation directory
 INSTALL_DIR="/opt/vedownloader"
 echo "Creating installation directory at $INSTALL_DIR..."
@@ -60,25 +65,25 @@ echo "Setting permissions..."
 chown -R "$REAL_USER:$(id -gn $REAL_USER)" "$INSTALL_DIR"
 chmod +x "$INSTALL_DIR/vedownloader.sh"
 
+# Create symlink for easy access
+echo "Creating symlink to /usr/local/bin/vedownloader..."
+ln -sf "$REAL_HOME/VeDownloader/vedownloader.sh" /usr/local/bin/vedownloader
+
 # Create desktop entry
 echo "Creating desktop entry..."
 DESKTOP_FILE="/usr/share/applications/vedownloader.desktop"
 cat > "$DESKTOP_FILE" << EOF
 [Desktop Entry]
 Name=VeDownloader
-Comment=Download videos from various sources
-Exec=bash -c "cd $INSTALL_DIR && ./vedownloader.sh"
-Icon=video-display
-Terminal=false
+Exec=/usr/local/bin/vedownloader
+Icon=$REAL_HOME/VeDownloader/icon.png
 Type=Application
-Categories=AudioVideo;Network;
-Keywords=video;download;youtube;
-StartupNotify=true
+Categories=Utility;
 EOF
 
-# Create symbolic link in /usr/local/bin
-echo "Creating symbolic link..."
-ln -sf "$INSTALL_DIR/vedownloader.sh" /usr/local/bin/vedownloader
+# Update desktop database
+echo "Updating desktop database..."
+update-desktop-database /usr/share/applications || true
 
 echo ""
 echo "========================================"

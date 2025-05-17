@@ -23,6 +23,14 @@ rm -f /usr/share/applications/vedownloader.desktop
 echo "🧹 ลบ symlink ที่ /usr/local/bin/vedownloader..."
 rm -f /usr/local/bin/vedownloader
 
+# Remove virtual environment
+echo "🧹 Removing virtual environment..."
+rm -rf "$HOME/VeDownloader/.venv"
+
+# Remove Python dependencies (optional)
+echo "🧹 Removing Python dependencies..."
+pip3 uninstall -y PyQt5 yt-dlp || true
+
 # อัปเดต database ของเมนู (optional)
 echo "🔄 อัพเดทฐานข้อมูลเมนู..."
 update-desktop-database /usr/share/applications || true
