@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=VeDownloader
+Comment=Download videos from various sources
+Exec=bash -c "cd $(dirname %k) && ./vedownloader.sh"
+Icon=video-display
+Terminal=false
+Type=Application
+Categories=AudioVideo;Network;
+Keywords=video;download;youtube;
+StartupNotify=true

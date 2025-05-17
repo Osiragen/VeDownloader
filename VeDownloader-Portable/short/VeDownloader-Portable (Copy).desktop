@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=VeDownloader Portable
+GenericName=Video Downloader
+Comment=Download videos from various sources
+Comment[th]=ดาวน์โหลดวิดีโอจากแหล่งต่างๆ
+Exec=/home/osiragen/Downloads/VeDownloader-main (2)/VeDownloader-Portable/VeDownloader-Portable.sh"
+Icon=video-display
+Terminal=false
+Type=Application
+Categories=AudioVideo;Network;Utility;
+Keywords=video;download;youtube;ดาวน์โหลด;วิดีโอ;
+StartupNotify=true

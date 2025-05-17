@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=VeDownloader
+Comment=Start VeDownloader Portable
+Exec=/home/osiragen/Desktop/VeDownloader-Portable/VeDownloader-Portable.sh
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+Categories=AudioVideo;Network;
